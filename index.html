@@ -16,25 +16,11 @@
         .hide {
             display: none !important;
         }
+    </style>
+</head>
 
-        .flash {
-            animation: flash 0.1s infinite;
-        }
-
-        @keyframes flash {
-            from {
-                opacity: 1.0;
-            }
-
-            50% {
-                opacity: 0.1;
-            }
-
-            to {
-                opacity: 1.0;
-            }
-        }
-
+<body>
+    <style>
         @keyframes move001 {
             from {
                 top: 90vh;
@@ -66,7 +52,18 @@
                 top: 0;
             }
         }
-
+    </style>
+    <div id="page-1">
+        <!-- 展示4s -->
+        <div
+            style="display: flex;justify-content: center;align-items: center;background-color: black;height: 100vh;flex-direction: column;font-size: 60px;color: #fff;">
+            <h3 style="position: relative;animation: move001 1s;animation-fill-mode: both;">接下来您将看到</h3>
+            <h3 style="position: relative;animation: move002 1s;animation-delay:1s;animation-fill-mode: both;">一次难忘的
+            </h3>
+            <h3 style="position: relative;animation: move003 2s;animation-delay:2s;animation-fill-mode: both;">自我介绍</h3>
+        </div>
+    </div>
+    <style>
         @keyframes move004 {
             from {
                 top: 100vh;
@@ -84,6 +81,42 @@
 
             to {
                 top: 0;
+            }
+        }
+    </style>
+    <div id="page-2" class="hide">
+        <!-- 展示4s -->
+        <div style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;">
+            <div
+                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: relative;animation: move004 1s;animation-fill-mode: both;">
+                友</div>
+            <div
+                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: relative;animation: move005 1s;animation-delay:1s;animation-fill-mode: both;">
+                情</div>
+            <div
+                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: relative;animation: move004 1s;animation-delay:2s;animation-fill-mode: both;">
+                提</div>
+            <div
+                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: relative;animation: move005 1s;animation-delay:3s;animation-fill-mode: both;">
+                醒</div>
+        </div>
+    </div>
+    <style>
+        .flash {
+            animation: flash 0.1s infinite;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.1;
+            }
+
+            to {
+                opacity: 1.0;
             }
         }
 
@@ -104,7 +137,34 @@
             }
 
         }
+    </style>
+    <div id="page-3" class="hide">
+        <!-- 展示2s -->
+        <div style="height: 100vh;font-size: 20vw;position: relative;">
+            <div
+                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;">
+                千</div>
+            <div
+                style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;">
+            </div>
+            万
+        </div>
+        <div
+            style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
+            不</div>
+        <div
+            style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
+            要</div>
 
+        <div
+            style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
+            眨</div>
+        <div
+            style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
+            眼</div>
+    </div>
+    </div>
+    <style>
         @keyframes move007 {
             from {
                 opacity: 0;
@@ -140,74 +200,77 @@
             }
         }
     </style>
-</head>
-
-<body>
-    <div id="page-1">
-        <!-- 展示4s -->
-        <div
-            style="display: flex;justify-content: center;align-items: center;background-color: black;height: 100vh;flex-direction: column;font-size: 60px;color: #fff;">
-            <h3 style="position: relative;animation: move001 1s;animation-fill-mode: both;">接下来您将看到</h3>
-            <h3 style="position: relative;animation: move002 1s;animation-delay:1s;animation-fill-mode: both;">一次难忘的
-            </h3>
-            <h3 style="position: relative;animation: move003 2s;animation-delay:2s;animation-fill-mode: both;">自我介绍</h3>
-        </div>
-    </div>
-    <div id="page-2" class="hide">
-        <!-- 展示4s -->
-        <div style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;">
-            <div
-                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: relative;animation: move004 1s;animation-fill-mode: both;">
-                友</div>
-            <div
-                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: relative;animation: move005 1s;animation-delay:1s;animation-fill-mode: both;">
-                情</div>
-            <div
-                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: relative;animation: move004 1s;animation-delay:2s;animation-fill-mode: both;">
-                提</div>
-            <div
-                style="flex:1;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: relative;animation: move005 1s;animation-delay:3s;animation-fill-mode: both;">
-                醒</div>
-        </div>
-    </div>
-    <div id="page-3" class="hide">
-        <div style="height: 100vh;font-size: 20vw;position: relative;">
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: absolute;width:50vw;height:100vh;left:0;animation: move006 0.4s;animation-fill-mode: both;">
-                千</div>
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: absolute;width:50vw;height:100vh;left:50vw;animation: move006 0.4s;animation-fill-mode: both;">
-                万</div>
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: absolute;width:50vw;height:100vh;left:0;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
-                不</div>
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: absolute;width:50vw;height:100vh;left:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
-                要</div>
-
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: absolute;width:50vw;height:100vh;left:0;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
-                眨</div>
-            <div
-                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;position: absolute;width:50vw;height:100vh;left:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
-                眼</div>
-        </div>
-    </div>
+    <!-- 展示1s -->
     <div id="page-4" class="hide">
         <div
             style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;position: relative;">
             <div
-                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.3s;animation-fill-mode: both;">
+                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.25s;animation-fill-mode: both;">
                 3</div>
             <div
-                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.3s;animation-fill-mode: both;animation-delay:0.3s;">
+                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.25s;animation-fill-mode: both;animation-delay:0.25s;">
                 2</div>
             <div
-                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.3s;animation-fill-mode: both;animation-delay:0.6s;">
+                style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.25s;animation-fill-mode: both;animation-delay:0.5s;">
                 1</div>
             <div
-                style="background-color:black;color:#fff;width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move008 0.3s;animation-fill-mode: both;animation-delay:0.9s;">
+                style="background-color:black;color:#fff;width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move008 0.25s;animation-fill-mode: both;animation-delay:0.75s;">
                 GO</div>
+        </div>
+    </div>
+    <style>
+        @keyframes move009 {
+            from {
+                font-size: 5vw;
+                opacity: 0;
+            }
+
+            50% {
+                font-size: 5vw;
+                opacity: 1;
+            }
+
+            to {
+                font-size: 5vw;
+                opacity: 0;
+            }
+
+        }
+        @keyframes move010 {
+            from {
+                font-size: 20vw;
+                opacity: 0;
+            }
+
+            50% {
+                font-size: 20vw;
+                opacity: 1;
+            }
+
+            to {
+                font-size: 20vw;
+                opacity: 1;
+            }
+
+        }
+    </style>
+    <div id="page-5" class="hide">
+        <div style="height: 100vh;position: relative;background-color: black;">
+            <div
+                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;color:white;width:50vw;height:100vh;left:0;animation: move009 0.4s;animation-fill-mode: both;">
+                我</div>
+            <div
+                style="position: absolute;top:0;right:0;display: flex;justify-content: center;align-items: center;color:white;width:50vw;height:100vh;animation: move009 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
+                的</div>
+            <div
+                style="position: absolute;top:0;left:30vw;display: flex;justify-content: center;align-items: center;color:white;width:50vw;height:100vh;animation: move009 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
+                名字</div>
+            <div
+                style="position: absolute;top:-20vh;left:50vw;display: flex;justify-content: center;align-items: center;color:white;width:50vw;height:100vh;animation: move009 0.4s;animation-fill-mode: both;animation-delay:1.2s;">
+                叫做</div>
+            <div
+                style="position: absolute;top:0;left:10vw;display: flex;justify-content: center;align-items: center;color:white;width:80vw;height:100vh;animation: move010 0.4s;animation-fill-mode: both;animation-delay:1.6s;">
+                杨杰</div>
         </div>
     </div>
 </body>
@@ -229,8 +292,12 @@
         if (time == 9) {
             flash()
         }
-
+        //切换 321go
         if (time == 10) {
+            nextPage()
+        }
+        //切换 我的名字叫做杨杰
+        if (time == 11) {
             nextPage()
         }
 
@@ -239,12 +306,12 @@
 
     function nextPage() {
         var nextPage = pageNow * 1 + 1
-        var obj1=document.getElementById('page-' + pageNow)
-        var obj2=document.getElementById('page-' + nextPage)
-       
+        var obj1 = document.getElementById('page-' + pageNow)
+        var obj2 = document.getElementById('page-' + nextPage)
+
         // 当前page添加 hide
         var classname1 = obj1.className;
-        classname1 = classname1==''?'hide':classname1+' hide';
+        classname1 = classname1 == '' ? 'hide' : classname1 + ' hide';
         obj1.className = classname1;
 
         // 下一个page删除 hide
@@ -258,7 +325,7 @@
     function flash() {
         var classname = document.getElementById('page-' + pageNow).className;
         //添加 flash 样式
-        classname = classname==''?'flash':classname+' flash';
+        classname = classname == '' ? 'flash' : classname + ' flash';
         document.getElementById("page-" + pageNow).className = classname;
     }
 
