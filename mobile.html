@@ -842,33 +842,9 @@
     document.body.addEventListener('touchmove', function (e) {
         e.preventDefault()
     }, { passive: false })
-    var ua = navigator.userAgent.toLowerCase();
-    var testUa = regexp => regexp.test(ua);
-    var testVs = regexp => ua.match(regexp).toString().replace(/[^0-9|_.]/g, "").replace(/_/g, ".");
-    var system = "unknow";
-    if (testUa(/windows|win32|win64|wow32|wow64/g)) {
-        system = "windows"; // windows系统
-    } else if (testUa(/macintosh|macintel/g)) {
-        system = "macos"; // macos系统
-    } else if (testUa(/x11/g)) {
-        system = "linux"; // linux系统
-    } else if (testUa(/android|adr/g)) {
-        system = "android"; // android系统
-    } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
-        system = "ios"; // ios系统
-    }
-    let platform = "unknow";
-    if (system === "windows" || system === "macos" || system === "linux") {
-        platform = "desktop"; // 桌面端
-    } else if (system === "android" || system === "ios" || testUa(/mobile/g)) {
-        platform = "mobile"; // 移动端
-    }
 
-    if (platform == "desktop") {
-        window.location.href = './index.html';
-    } else {
-        start()
-    }
+    start()
+    
     var time = 0
     var pageNow = 1
 
