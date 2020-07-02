@@ -92,7 +92,8 @@
     </style>
     <div id="page-2" class="hide">
         <!-- 展示4s -->
-        <div style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;">
+        <div
+            style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;overflow: hidden;">
             <div
                 style="flex:1;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;position: relative;animation: move004 1s;animation-fill-mode: both;">
                 友</div>
@@ -146,29 +147,27 @@
     </style>
     <div id="page-3" class="hide">
         <!-- 展示2s -->
-        <div style="height: 100vh;font-size: 20vw;position: relative;">
+        <div style="height: 100vh;font-size: 20vw;position: relative;overflow: hidden;">
             <div
                 style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;">
                 千</div>
             <div
                 style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;">
                 万</div>
+            <div
+                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
+                不</div>
+            <div
+                style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
+                要</div>
 
+            <div
+                style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
+                眨</div>
+            <div
+                style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
+                眼</div>
         </div>
-        <div
-            style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
-            不</div>
-        <div
-            style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.4s;">
-            要</div>
-
-        <div
-            style="position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;background-color: black;color:white;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
-            眨</div>
-        <div
-            style="position: absolute;top:0;left:50vw;display: flex;justify-content: center;align-items: center;background-color: white;color:black;height: 100vh;width:50vw;animation: move006 0.4s;animation-fill-mode: both;animation-delay:0.8s;">
-            眼</div>
-    </div>
     </div>
     <style>
         @keyframes move007 {
@@ -209,7 +208,7 @@
     <!-- 展示2s -->
     <div id="page-4" class="hide">
         <div
-            style="display: flex;justify-content: center;align-items: center;height: 100vh;font-size: 20vw;position: relative;">
+            style="display: flex;justify-content: center;align-items: center;height: 100vh;width:100vw;font-size: 20vw;position: relative;overflow: hidden;">
             <div
                 style="width:100vw;height:100vh;position: absolute;top:0;left:0;display: flex;justify-content: center;align-items: center;animation: move007 0.25s;animation-fill-mode: both;">
                 3</div>
@@ -837,21 +836,29 @@
 </body>
 
 <script>
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
+    var ua = navigator.userAgent.toLowerCase();
+    var testUa = regexp => regexp.test(ua);
+    var testVs = regexp => ua.match(regexp).toString().replace(/[^0-9|_.]/g, "").replace(/_/g, ".");
+    var system = "unknow";
+    if (testUa(/windows|win32|win64|wow32|wow64/g)) {
+        system = "windows"; // windows系统
+    } else if (testUa(/macintosh|macintel/g)) {
+        system = "macos"; // macos系统
+    } else if (testUa(/x11/g)) {
+        system = "linux"; // linux系统
+    } else if (testUa(/android|adr/g)) {
+        system = "android"; // android系统
+    } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
+        system = "ios"; // ios系统
     }
-    if (!IsPC) {
+    var platform = "unknow";
+    if (system === "windows" || system === "macos" || system === "linux") {
+        platform = "desktop"; // 桌面端
+    } else if (system === "android" || system === "ios" || testUa(/mobile/g)) {
+        platform = "mobile"; // 移动端
+    }
+
+    if (platform == "mobile") {
         window.location.href = './mobile.html';
     } else {
         start()
