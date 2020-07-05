@@ -4,7 +4,6 @@ document.body.addEventListener('touchmove', function (e) {
 }, { passive: false })
 
 start()
-var timer = null;
 var time = 0
 var pageNow = 1
 
@@ -13,7 +12,7 @@ function start() {
     var classname = obj.className;
     classname = classname.replace('hide', "");
     obj.className = classname;
-    timer=setInterval(() => {
+    var timer=setInterval(function(){
         console.log(time)
         ++time;
         // 友情提醒
